@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  AutoFansMac.app entitlements.
+
+	  The App Sandbox is explicitly OFF and must stay off: the App Sandbox blocks the
+	  AppleSMC IOKit user client, which is why no fan-control utility ships on the Mac
+	  App Store (PROMPT.md §3 N3, pitfall #14).
+
+	  Hardened Runtime stays ON (it is required for notarization) and needs no extra
+	  entitlement here: reading AppleSMC unprivileged is allowed without one.
+	-->
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+
+	<!-- Not sandboxed means no file-access entitlements are required; writes go to
+	     ~/Library/Application Support/AutoFansMac. -->
+</dict>
+</plist>

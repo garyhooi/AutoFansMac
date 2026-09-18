@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  LaunchDaemon definition for the AutoFansMac privileged helper.
+
+	  Installed by the app with SMAppService.daemon(plistName:) and started on demand
+	  by launchd when the app opens an NSXPCConnection with options .privileged.
+
+	  ProgramArguments MUST be an absolute path (launchd requirement), which is why the
+	  app requires itself to live in /Applications: the path below is the canonical
+	  install location. HelperClient verifies at install time that its own bundle path
+	  matches and offers a dev fallback (see Docs/README-DEV.md) when it does not.
+	-->
+	<key>Label</key>
+	<string>com.autofansmac.AutoFansMac.helper</string>
+
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Applications/AutoFansMac.app/Contents/Library/LaunchDaemons/AutoFansMacHelper</string>
+	</array>
+
+	<key>MachServices</key>
+	<dict>
+		<key>com.autofansmac.AutoFansMac.helper</key>
+		<true/>
+	</dict>
+
+	<!-- Started by launchd on the first XPC lookup, not at boot. -->
+	<key>RunAtLoad</key>
+	<false/>
+
+	<!-- Shown as a friendly name in System Settings → General → Login Items. -->
+	<!-- Cosmetic: shown in Login Items. Must match the app target's
+	     PRODUCT_BUNDLE_IDENTIFIER, which is also what
+	     HelperConstants.defaultAppBundleIdentifier records. -->
+	<key>AssociatedBundleIdentifiers</key>
+	<array>
+		<string>dev.g-studio.AutoFansMac</string>
+	</array>
+
+	<!-- The daemon only needs to run while the app is driving fans; launchd keeps it
+	     alive between connections. -->
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

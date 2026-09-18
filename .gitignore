@@ -1,0 +1,25 @@
+# Build output
+build/
+DerivedData/
+*.xcarchive
+*.dmg
+*.zip
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# SwiftPM
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Explicit-module-build cache (produced by -target builds)
+-Xcc/
+
+# Editor / scanner state
+.vscode/

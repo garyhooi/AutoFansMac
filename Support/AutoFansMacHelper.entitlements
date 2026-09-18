@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  AutoFansMacHelper entitlements.
+
+	  The helper is a root launchd daemon embedded in the app bundle. It needs no
+	  sandbox exception (it is not sandboxed) and no special entitlement: writing SMC
+	  fan keys is gated by root privilege alone, which launchd grants the daemon.
+
+	  Keep this file empty-by-design rather than absent: an explicit, reviewed
+	  entitlements file makes "the helper asks for nothing extra" auditable.
+	-->
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+</dict>
+</plist>

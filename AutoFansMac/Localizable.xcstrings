@@ -1,0 +1,795 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "(%lld)" : {
+
+    },
+    "%@" : {
+
+    },
+    "%@  (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@  (%2$@)"
+          }
+        }
+      }
+    },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · %@ · mode key %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ · mode key %3$@"
+          }
+        }
+      }
+    },
+    "%@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@)"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld °C" : {
+
+    },
+    "%lld fan%@ detected" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld fan%2$@ detected"
+          }
+        }
+      }
+    },
+    "%lld RPM" : {
+
+    },
+    "°C" : {
+
+    },
+    "°F" : {
+
+    },
+    "⚠︎ %@" : {
+
+    },
+    "A fan curve tracks this sensor" : {
+
+    },
+    "About" : {
+
+    },
+    "Activate" : {
+
+    },
+    "Advanced" : {
+
+    },
+    "Allow fan targets outside the fan's rated range" : {
+      "comment" : "Expert switch that disables the mandatory RPM clamp. Dangerous; lasts one session.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow fan targets outside the fan's rated range"
+          }
+        }
+      }
+    },
+    "Allow unsafe fan targets?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow unsafe fan targets?"
+          }
+        }
+      }
+    },
+    "Also override when macOS reports a serious thermal state" : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Apply curve" : {
+
+    },
+    "Apply on launch" : {
+
+    },
+    "Applying…" : {
+      "comment" : "Transient per-fan status while a command is in flight.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applying…"
+          }
+        }
+      }
+    },
+    "Auto" : {
+      "comment" : "Fan control mode: macOS owns the fan.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto"
+          }
+        }
+      }
+    },
+    "Auto (macOS)" : {
+      "comment" : "Fan badge when the hardware mode is 0 or 3.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto (macOS)"
+          }
+        }
+      }
+    },
+    "AutoFansMac" : {
+
+    },
+    "Automatic" : {
+      "comment" : "Built-in profile that hands every fan back to macOS.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatic"
+          }
+        }
+      }
+    },
+    "built-in" : {
+
+    },
+    "Built-in" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Celsius (°C)" : {
+
+    },
+    "Clamped to the fan's safe range (%lld–%lld RPM)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clamped to the fan's safe range (%1$lld–%2$lld RPM)."
+          }
+        }
+      }
+    },
+    "Clear" : {
+
+    },
+    "Computed" : {
+
+    },
+    "Constant" : {
+      "comment" : "Fan control mode: a single fixed RPM.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Constant"
+          }
+        }
+      }
+    },
+    "Continue" : {
+
+    },
+    "Continuous sensor monitoring works without it." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuous sensor monitoring works without it."
+          }
+        }
+      }
+    },
+    "Copy dev install command" : {
+
+    },
+    "Copy Diagnostics to Clipboard" : {
+
+    },
+    "Copy report" : {
+
+    },
+    "Credits" : {
+
+    },
+    "Current" : {
+
+    },
+    "Custom" : {
+
+    },
+    "Custom (AutoFansMac)" : {
+      "comment" : "Fan badge while we are driving the fan.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom (AutoFansMac)"
+          }
+        }
+      }
+    },
+    "Custom mode is unavailable on this Mac (firmware refused)." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom mode is unavailable on this Mac (firmware refused)."
+          }
+        }
+      }
+    },
+    "Delete" : {
+
+    },
+    "Delete “%@”?" : {
+
+    },
+    "Details" : {
+
+    },
+    "Diagnostics" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diagnostics"
+          }
+        }
+      }
+    },
+    "Dismiss" : {
+
+    },
+    "Drive every fan to its maximum RPM" : {
+
+    },
+    "Duplicate" : {
+
+    },
+    "Expert options" : {
+
+    },
+    "Export Diagnostics…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export Diagnostics…"
+          }
+        }
+      }
+    },
+    "Export…" : {
+
+    },
+    "Fahrenheit (°F)" : {
+
+    },
+    "Fan commands, helper state changes and failures appear here." : {
+
+    },
+    "Fan Control" : {
+
+    },
+    "Fan control helper required" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fan control helper required"
+          }
+        }
+      }
+    },
+    "Fans" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fans"
+          }
+        }
+      }
+    },
+    "Files" : {
+
+    },
+    "Filter by name or key" : {
+
+    },
+    "Floor" : {
+
+    },
+    "Full blast" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full blast"
+          }
+        }
+      }
+    },
+    "Full Blast" : {
+      "comment" : "Built-in profile that drives every fan to its maximum RPM.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full Blast"
+          }
+        }
+      }
+    },
+    "General" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "Hardware" : {
+
+    },
+    "Helper" : {
+
+    },
+    "Helper running" : {
+
+    },
+    "I understand that I am controlling the fans myself" : {
+
+    },
+    "I understand the risk" : {
+
+    },
+    "Install helper" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install helper"
+          }
+        }
+      }
+    },
+    "Launch at login" : {
+
+    },
+    "Lifecycle" : {
+
+    },
+    "macOS controls this fan. AutoFansMac only reads it." : {
+
+    },
+    "Menu bar shows" : {
+
+    },
+    "Minimum RPM change before a write" : {
+
+    },
+    "Mode" : {
+
+    },
+    "Monitoring only" : {
+
+    },
+    "Monitors every sensor without touching your fans." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monitors every sensor without touching your fans."
+          }
+        }
+      }
+    },
+    "Name" : {
+
+    },
+    "New" : {
+
+    },
+    "No custom profiles yet. Create one, or duplicate a built-in to edit it." : {
+
+    },
+    "No events yet" : {
+
+    },
+    "No fans detected" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No fans detected"
+          }
+        }
+      }
+    },
+    "No fans detected on this Mac" : {
+      "comment" : "Fanless Macs report FNum = 0. This is a normal state, not an error.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No fans detected on this Mac"
+          }
+        }
+      }
+    },
+    "No sensors match “%@”" : {
+
+    },
+    "Not now" : {
+
+    },
+    "Only available when AutoFansMac runs from /Applications" : {
+
+    },
+    "Open AutoFansMac…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open AutoFansMac…"
+          }
+        }
+      }
+    },
+    "Open Login Items" : {
+
+    },
+    "Open Sensors" : {
+
+    },
+    "Polling" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Privileged helper" : {
+
+    },
+    "Profiles" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profiles"
+          }
+        }
+      }
+    },
+    "Quit AutoFansMac" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quit AutoFansMac"
+          }
+        }
+      }
+    },
+    "Re-apply “%@”" : {
+
+    },
+    "Re-apply the active profile automatically when AutoFansMac starts" : {
+
+    },
+    "Re-enumerate every SMC key (a full sweep takes about a second)" : {
+
+    },
+    "Reading sensors…" : {
+
+    },
+    "Reconnect" : {
+
+    },
+    "Refresh interval" : {
+
+    },
+    "Reinstall helper" : {
+
+    },
+    "Rename…" : {
+
+    },
+    "Replace the installed helper with this build's" : {
+
+    },
+    "Rescan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rescan"
+          }
+        }
+      }
+    },
+    "Restore Automatic" : {
+
+    },
+    "Restore fans to Automatic when AutoFansMac quits" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore fans to Automatic when AutoFansMac quits"
+          }
+        }
+      }
+    },
+    "Return every fan to macOS control" : {
+
+    },
+    "RPM" : {
+
+    },
+    "Safety" : {
+
+    },
+    "Sensor" : {
+
+    },
+    "Sensor naming data is derived from the Stats project by Serhiy Mytrovtsiy (MIT licence)." : {
+
+    },
+    "Sensor this fan's curve tracks" : {
+
+    },
+    "Sensor-based" : {
+      "comment" : "Fan control mode: ramps on a tracked temperature sensor.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensor-based"
+          }
+        }
+      }
+    },
+    "Sensors" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensors"
+          }
+        }
+      }
+    },
+    "Set this fan to its maximum RPM" : {
+
+    },
+    "Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Settings…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings…"
+          }
+        }
+      }
+    },
+    "Show AutoFansMac in the Dock" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show AutoFansMac in the Dock"
+          }
+        }
+      }
+    },
+    "Show keys that are not in the sensor catalog" : {
+
+    },
+    "Show sensors that are not in the catalog" : {
+
+    },
+    "Status" : {
+
+    },
+    "Target" : {
+
+    },
+    "Temp" : {
+
+    },
+    "Temperature" : {
+
+    },
+    "Temperature unit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temperature unit"
+          }
+        }
+      }
+    },
+    "The administrator password is requested only when the helper is installed or updated." : {
+
+    },
+    "The previous session did not shut down cleanly" : {
+
+    },
+    "Thermal floor override" : {
+      "comment" : "Safety feature: forces every fan to maximum when a CPU/GPU/SOC sensor gets too hot.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thermal floor override"
+          }
+        }
+      }
+    },
+    "Thermal override engaged" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thermal override engaged"
+          }
+        }
+      }
+    },
+    "This cannot be undone. The profile's settings are removed from profiles.json." : {
+
+    },
+    "Tmax" : {
+
+    },
+    "Tmax %lld°" : {
+
+    },
+    "Tmin" : {
+
+    },
+    "Tmin %lld°" : {
+
+    },
+    "Tmin must be below Tmax" : {
+
+    },
+    "Tracked" : {
+
+    },
+    "Tracked sensor is unreadable — the fan is being held at maximum as a fail-safe." : {
+
+    },
+    "Uninstall helper" : {
+
+    },
+    "Unknown" : {
+      "comment" : "Group for SMC keys that are not in the sensor catalog.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown"
+          }
+        }
+      }
+    },
+    "Unknown keys appear in the Sensors view under “Unknown” with their raw SMC key." : {
+
+    },
+    "Unlock style" : {
+
+    },
+    "Value is applied immediately; dragging is debounced by 0.5 s." : {
+
+    },
+    "Version" : {
+
+    },
+    "Welcome to AutoFansMac" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to AutoFansMac"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
