@@ -156,6 +156,16 @@ resolving something else. Cloudflare's build image ships Bun, so `BUN_VERSION` o
 if you want a specific one: `packageManager: bun@1.3.14` in `package.json` does not block a
 different Bun.
 
+### A deployment is pinned to its commit
+
+Cloudflare binds a deployment to the commit that triggered it. If a build fails with
+`Cannot find cwd: .../website`, it is building a commit from before the site existed and
+the root directory has nothing to resolve against. Re-running that same deployment retries
+the same commit; trigger a new one instead (push to the production branch).
+
+The build command runs *inside* the root directory, so it must not `cd website` itself,
+and the build output directory is relative to the root directory: `out`.
+
 ### The environment variable is not optional
 
 `NEXT_PUBLIC_SITE_URL` is read at build time and baked into the canonical link,
