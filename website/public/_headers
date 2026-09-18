@@ -1,0 +1,32 @@
+# Cloudflare Pages and Workers static assets read this file from the deployed output.
+#
+# Deliberately absent:
+#   Strict-Transport-Security   belongs at the zone level, where it covers every host on
+#                               the domain, and it is awkward to walk back.
+#   Content-Security-Policy     Next inlines its own bootstrap script, so a policy that
+#                               has not been tested against a live deploy fails closed
+#                               and takes the page down with it.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+# Content-hashed by the build, so the filename changes whenever the bytes do.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Not content-hashed, so a week rather than a year. Cloudflare purges its cache on every
+# deployment, so a changed image is picked up immediately either way.
+/shots/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/app-icon.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/icon.png
+  Cache-Control: public, max-age=604800
+
+/apple-icon.png
+  Cache-Control: public, max-age=604800

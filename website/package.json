@@ -1,0 +1,30 @@
+{
+  "name": "autofansmac-site",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "bun@1.3.14",
+  "description": "Marketing site for AutoFansMac, a native macOS fan control and sensor monitoring app.",
+  "scripts": {
+    "dev": "next dev -p 3210",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "catalog": "bun scripts/generate-sensor-catalog.mjs",
+    "images": "bun scripts/optimize-images.mjs",
+    "preview": "bun scripts/preview.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "motion": "^13.4.0",
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.0"
+  }
+}

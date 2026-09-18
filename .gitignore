@@ -23,3 +23,12 @@ Package.resolved
 
 # Editor / scanner state
 .vscode/
+
+# Website (website/) build output
+website/node_modules/
+website/.next/
+website/out/
+website/next-env.d.ts
+website/*.tsbuildinfo
+# bun keeps no store inside the repository, so bun.lock is committed and nothing else
+# needs ignoring here.

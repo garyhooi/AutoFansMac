@@ -1,0 +1,12 @@
+{
+  // Cloudflare reads this for `wrangler pages deploy`, and the Pages dashboard uses
+  // pages_build_output_dir as the build output directory, so it does not have to be
+  // typed into the settings form.
+  //
+  // Deploying as a Worker with static assets instead? Replace the last property with:
+  //   "compatibility_date": "2026-09-18",
+  //   "assets": { "directory": "./out", "not_found_handling": "404-page" }
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "autofansmac-site",
+  "pages_build_output_dir": "./out"
+}

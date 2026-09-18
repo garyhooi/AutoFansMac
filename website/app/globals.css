@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/*
+  AutoFansMac site design tokens.
+
+  Direction: machined graphite with one coolant signal colour, taken from the app icon
+  (#8CF5FD). The app's own UI is dark, so the page is dark-locked: every screenshot sits
+  on the same value range as the page instead of punching a bright hole in it.
+
+  Locks (see the pre-flight list):
+    accent    one accent only, aqua, used for live data and for the single CTA intent
+    shape     shells 28px, cores 20px, controls full pill, inputs 12px
+    neutrals  warm greys throughout, never mixed with cool greys. The warm ramp against
+              a cool accent is deliberate; a zinc ramp would read as the default theme
+*/
+@theme {
+  --color-ink-1000: #060708;
+  --color-ink-950: #08090a;
+  --color-ink-900: #0b0c0f;
+  --color-ink-880: #0e1013;
+  --color-ink-850: #121417;
+  --color-ink-800: #17191d;
+  --color-ink-750: #1e2126;
+
+  --color-ash-100: #edeae6;
+  --color-ash-200: #d6d2cc;
+  --color-ash-300: #b4afa8;
+  --color-ash-400: #938f89;
+  /*
+    ash-500 is the micro-label colour. It is pinned at 5:1 on every surface the page
+    uses, because it carries 10 to 12px text and 12px text still needs AA.
+  */
+  --color-ash-500: #82807b;
+  /* ash-600 is non-text only: hairline icons and disabled states. */
+  --color-ash-600: #57554f;
+
+  /*
+    The brand colour is #8CF5FD, read off the app icon. It clears 15.9:1 against the
+    page and against ink text laid on top of it, so one colour can serve as the CTA
+    fill, the live-data stroke and the focus ring without a second accent.
+  */
+  --color-aqua-200: #d9fcfe;
+  --color-aqua-300: #a9f8fe;
+  --color-aqua-400: #9af6fd;
+  --color-aqua-500: #8cf5fd;
+  --color-aqua-600: #5cd9e8;
+  --color-aqua-700: #2e93a4;
+  --color-aqua-950: #08282f;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Shape lock: shells and cores are concentric (28 - 2 x 4px pad = 20). */
+  --radius-shell: 28px;
+  --radius-core: 20px;
+  --radius-input: 12px;
+
+  /* Motion lock: mass and settle, never linear. */
+  --ease-swift: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Transform only, for the same reason the reveal system is transform only: the
+     disclosure text never passes through a low-contrast state. */
+  --animate-rise: rise 0.4s var(--ease-out-expo) both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(-4px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: rgb(255 255 255 / 0.07);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-ash-100);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  /* Anchors clear the floating nav. */
+  section[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-aqua-500);
+    color: #0a0a0b;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-aqua-400);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  input[type="range"] {
+    accent-color: var(--color-aqua-500);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /*
+    Double-bezel: a tray (shell) holding a machined plate (core). Used for every
+    elevated surface on the page so depth reads as hardware rather than as a card.
+  */
+  .shell {
+    background-color: rgb(255 255 255 / 0.028);
+    border: 1px solid rgb(255 255 255 / 0.07);
+    border-radius: var(--radius-shell);
+    padding: 8px;
+  }
+
+  .shell-tight {
+    padding: 6px;
+  }
+
+  .core {
+    background-color: var(--color-ink-880);
+    border-radius: var(--radius-core);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+    overflow: hidden;
+  }
+
+  .core-flat {
+    background-color: var(--color-ink-900);
+    border: 1px solid rgb(255 255 255 / 0.06);
+    border-radius: var(--radius-core);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.05);
+  }
+
+  .hairline {
+    border-color: rgb(255 255 255 / 0.07);
+  }
+
+  /* Ambient shadow, tinted to the page hue instead of pure black. */
+  .ambient {
+    box-shadow: 0 40px 90px -50px rgb(0 0 0 / 0.95), 0 2px 0 0 rgb(255 255 255 / 0.02) inset;
+  }
+
+  /*
+    Film grain. Fixed, pointer-events-none, composited once. Never attached to a
+    scrolling container.
+  */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /*
+    Range input. Styled here rather than with utilities because the thumb pseudo
+    elements cannot be reached from a class list.
+  */
+  .slider {
+    appearance: none;
+    width: 100%;
+    /* 26px keeps the whole control above the 24px minimum target size. */
+    height: 26px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .slider::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.1);
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-top: -7px;
+    border-radius: 999px;
+    background: var(--color-aqua-500);
+    border: 2px solid var(--color-ink-950);
+    box-shadow: 0 0 0 1px rgb(140 245 253 / 0.5);
+    transition: transform 0.25s var(--ease-swift);
+  }
+
+  .slider:hover::-webkit-slider-thumb {
+    transform: scale(1.08);
+  }
+
+  .slider:active::-webkit-slider-thumb {
+    transform: scale(0.96);
+  }
+
+  .slider:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgb(140 245 253 / 0.35);
+  }
+
+  .slider::-moz-range-track {
+    height: 4px;
+    border-radius: 999px;
+    background: rgb(255 255 255 / 0.1);
+  }
+
+  .slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--color-aqua-500);
+    border: 2px solid var(--color-ink-950);
+  }
+}
+
+@utility measure {
+  max-width: 65ch;
+}
