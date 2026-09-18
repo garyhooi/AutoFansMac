@@ -8,6 +8,14 @@ No Electron. No kernel extension. No DriverKit. Three local Swift packages and o
 project. The app makes exactly one network request — the GitHub release check — and it can
 be switched off.
 
+## Screenshots
+
+| Fans | Sensors |
+|---|---|
+| ![Fans — per-fan mode, a sensor-based curve with Tmin/Tmax and a live preview](Docs/screenshots/fans.png) | ![Sensors — every SMC temperature, grouped and searchable](Docs/screenshots/sensors.png) |
+| **Profiles** — built-ins plus your own, each editable | **Settings** — helper, lifecycle and safety |
+| ![Profiles](Docs/screenshots/profiles.png) | ![Settings](Docs/screenshots/settings.png) |
+
 ## What it does
 
 | | |
